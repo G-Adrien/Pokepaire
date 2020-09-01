@@ -1,12 +1,21 @@
 let cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
-
+let cardStat = []
 let gameZone = document.getElementById("gameZone");
 let divRow = document.getElementById("divRow");
+let cardStatus = false;
 
-let nbClick = 0;
-
-
-
+function toggle(id, picture){
+    alert("ok" + cardStatus)
+    if(cardStatus === false){
+        cardStatus = true;
+        picture.src = "/img/pairePokemon/"+ id + ".png";
+    }
+    else{
+        cardStatus = false;
+        picture.src = "/img/pairePokemon/hidden.png";
+    }
+    console.log(cardStatus)
+}
 
 
 for (i=0; i< cards.length; i++){
@@ -23,14 +32,19 @@ for (i=0; i< cards.length; i++){
     picture.src = "/img/pairePokemon/hidden.png";
     
     card.addEventListener("click", function(){
-        nbClick++
-        picture.src = "/img/pairePokemon/"+ cards[card.id] + ".png";
-        
-    })
-};
+      toggle(cards[card.id],picture);
+    });
+}
 
 
 
-
+// picture.src = "/img/pairePokemon/"+ cards[card.id] + ".png";
 // picture.src = "/img/pairePokemon/"+ cards[i] + ".png";
 
+
+// if(cardStatus === false){
+//     picture.src = "/img/pairePokemon/hidden.png";
+// }
+// else{
+//     picture.src = "/img/pairePokemon/"+ cards[card.id] + ".png";
+// }
