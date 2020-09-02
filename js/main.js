@@ -1,50 +1,77 @@
-let cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
-let cardStat = []
-let gameZone = document.getElementById("gameZone");
-let divRow = document.getElementById("divRow");
-let cardStatus = false;
-
-function toggle(id, picture){
-    alert("ok" + cardStatus)
-    if(cardStatus === false){
-        cardStatus = true;
-        picture.src = "/img/pairePokemon/"+ id + ".png";
-    }
-    else{
-        cardStatus = false;
-        picture.src = "/img/pairePokemon/hidden.png";
-    }
-    console.log(cardStatus)
-}
 
 
-for (i=0; i< cards.length; i++){
+let cardBase = ["img/pairePokemon/1.png", "img/pairePokemon/2.png", "img/pairePokemon/3.png", "img/pairePokemon/4.png", "img/pairePokemon/5.png", "img/pairePokemon/6.png"];
+let allCards = cardBase.concat(cardBase);   // On copie le tableau pour avoir les images en double
+let backCard = "img/pairePokemon/hidden.png";     // On définie l'image de dos
+let click = 0;  // Nombre de cliques
+let pair = 0;   // Nombre de paires
+let choiceOne;  // Choix de la 1ère carte
+let choiceTwo;  // Choix de la 2ème carte
+let timer = 0;
+
+{/* 
+    <div class="divCol col-3">
+        <img src="/img/pairePokemon/1.png" alt="">
+    </div> 
     
-    let card = document.createElement("div");
-    card.classList.add("card", "col-3");
-    card.id = i;
-    divRow.appendChild(card);
+*/}
 
-    let picture = document.createElement("img");
-
-    picture.classList.add("card-img-top");
-    card.appendChild(picture);
-    picture.src = "/img/pairePokemon/hidden.png";
+    function generateCard(){
+        let html = "";
+        for(i=0; i<=allCards.length-1; i++){
+            let divRow = document.getElementById("divRow");
+            html += `
+            <div class="divCol col-3">
+                 <img src="/img/pairePokemon/hidden.png" onclick="chooseCard(${i})" draggable="false">
+            </div> 
+            `;
+            divRow.innerHTML = html;
+        } 
+    }
+    generateCard();
     
-    card.addEventListener("click", function(){
-      toggle(cards[card.id],picture);
-    });
-}
+    function chooseCard(card){
+        if(click ===2 ){
+            return
+        }
+        if(click === 0){
+            choiceOne = card;
+            document.images[card].src = allCards[card];
+            document.images[choiceOne].style.pointerEvents = 'none';
+            click = 1;
+        }
+        else{
+            click = 2
+            choiceTwo = card; 
+            document.images[card].src = allCards[card];
+            timer = setTimeout('checkCard()', 1000);
 
+        }
+        console.log(pair);
+        
+    }
 
-
-// picture.src = "/img/pairePokemon/"+ cards[card.id] + ".png";
-// picture.src = "/img/pairePokemon/"+ cards[i] + ".png";
-
-
-// if(cardStatus === false){
-//     picture.src = "/img/pairePokemon/hidden.png";
-// }
-// else{
-//     picture.src = "/img/pairePokemon/"+ cards[card.id] + ".png";
-// }
+    function checkCard(){
+        clearTimeout(checkCard);
+        click = 0;
+        if(allCards[choiceOne] === allCards[choiceTwo] ){
+            document.images[choiceOne].style.pointerEvents = 'none';
+		    document.images[choiceOne].style.opacity = '0.3';
+		    document.images[choiceTwo].style.pointerEvents = 'none';
+		    document.images[choiceTwo].style.opacity = '0.3';
+            pair++;
+        }
+        else{
+            document.images[choiceOne].src = backCard;
+		    document.images[choiceOne].style.pointerEvents = 'auto';
+		    document.images[choiceTwo].src = backCard;
+		    return;
+        }
+        if(pair === 6){
+            alert("you win");
+            // clearInterval(timerID);
+        }
+        
+    }   
+    
+    console.log(gameZone);
