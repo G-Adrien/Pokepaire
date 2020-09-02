@@ -100,32 +100,24 @@ h1{
   border-radius: 0;
 }
 
-.card{
-  border: 10px solid #ffcc00;
-  border-radius: 23px;
-  margin: 20px;
-  width: 50px;
-}
-.card:hover{
-  cursor: pointer;
+.divCol{
+  border: 0.6rem solid #ffcc00;
+  border-radius: 15px;
+  padding: 0;
+  margin: .5em;
 }
 
-.card img{
-  width: 100%;
-  height: auto;
+#gameZone img:hover{
+  cursor: pointer;  
 }
 
-.divRow{
-  background-color: black;
-  z-index: 400;
-}
-
-main{
-  padding: 0 0;
-}
-.row{
+#gameZone img{
   width: 100%;
 }
+
+/* #divRow{
+  
+} */
 
 
 /* ==========================================================================
