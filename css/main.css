@@ -87,11 +87,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
-@font-face {font-family:"Pokemon Solid Normal";src:url("/font/Pokemon_Solid_Normal/pokemonsolid.eot") format("eot"),url("/font/Pokemon_Solid_Normal/pokemonsolid.woff") format("woff"),url("/font/Pokemon_Solid_Normal/pokemonsolid.ttf") format("truetype"),url("/font/Pokemon_Solid_Normal/pokemonsolid.svg") format("svg");font-weight:normal;font-style:normal;}
+   @font-face {
+    font-family: "Pokemon Solid";
+    src: url("../font/Pokemon_Solid.ttf");
+           
 
+}
 h1{
-  font-family: "Pokemon Solid Normal";
+  font-family: "Pokemon Solid";
   color: #ffcc00;
   
 }
@@ -100,11 +103,15 @@ h1{
   border-radius: 0;
 }
 
-.divCol{
+.divCard{
   border: 0.6rem solid #ffcc00;
   border-radius: 15px;
   padding: 0;
   margin: .5em;
+
+}
+#gameZone{
+  padding-bottom: 10%;
 }
 
 #gameZone img:hover{
@@ -115,10 +122,9 @@ h1{
   width: 100%;
 }
 
-/* #divRow{
-  
-} */
-
+.divCol{
+  padding: 0;
+}
 
 /* ==========================================================================
    Helper classes
