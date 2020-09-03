@@ -109,13 +109,13 @@ h1{
   color: white;
 }
 
-.jumbotron a{
+.btnReplay{
   background-color: #ca1212;
   color: white;
-  padding: 0px 0px;
-  height: 2em;
+ 
+  
 }
-.jumbotron a:hover{
+.btnReplay:hover{
   background-color: #8d1111;
   color: rgb(179, 179, 179);
 }
@@ -150,6 +150,45 @@ h1{
 
 #divRow{
   max-width: 720px;
+}
+body{
+  position: relative;
+}
+#closePanel{
+  display: none;
+}
+#backgroundPanel{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.735);
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+}
+
+#winPanel{
+  position: fixed;
+ 
+  z-index: 201;
+  background-color: white;
+  border-radius: 4px;
+  padding: 3em 6em;
+  margin: 8%;
+}
+.cross{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-size: 2em;
+  z-index: 202;
+  top: -45px;
+  right: -37px;
+  height: auto;
+}
+.cross:hover{
+  color: rgb(165, 165, 165);
+  cursor: pointer;
 }
 /* ==========================================================================
    Helper classes

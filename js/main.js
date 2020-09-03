@@ -4,6 +4,7 @@ let backCard = "img/pairePokemon/hidden.png";     // On définie l'image de dos
 let click = 0;  // Nombre de cliques
 let pair = 0;   // Nombre de paires
 let tryUser = 0;
+let timeVictory = "";
 let choiceOne;  // Choix de la 1ère carte
 let choiceTwo;  // Choix de la 2ème carte
 var noRepeat = true;
@@ -72,8 +73,10 @@ function checkCard(){
         return;
     }
     if(pair === 6){
-        alert("you win");
+        document.getElementById("closePanel").style.display = "block"
         clearInterval(timerID);
+        document.getElementById("userTime").innerText = min + ':' + sec;
+        document.getElementById("userTry").innerText = tryUser;
     }
 }   
 
@@ -99,5 +102,10 @@ function chrono() {
         min++;
         sec = "0" + 0;
     }
+    
     document.getElementById("chrono").innerHTML = min + ':' + sec;
+}
+
+function closePanel(){
+    document.getElementById("closePanel").style.display = "none";
 }

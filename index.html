@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Poképaire</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
@@ -37,10 +37,28 @@
         <p class=" mr-5">Temps : <span id="chrono">0:00</span></p>
         <p class="">Nombre de coup : <span id="trySpan">0</span></p>
       </div>
-      <a class="btn btn-lg" href="#" role="button" onClick="window.location.reload()">Rejouer</a>
+      <a class="btn btn-lg btnReplay" href="#" role="button" onClick="window.location.reload()">Rejouer</a>
     </div>
   </header>
   <main>
+    <div id="closePanel">
+
+      <div id="backgroundPanel" class="d-flex justify-content-center">
+        
+        <div id="winPanel">
+          <h2>Félicitations vous avez gagné !</h2>
+          <p>Vous avez fini en <span id="userTime"></span>, vous avez réussi en <span id="userTry"></span> coups.</p>
+          <p>Pour rejouer veuillez cliquer sur le bouton ci-dessous <i class="fas fa-arrow-down"></i></p>
+          <div class="d-flex justify-content-center">
+            <a class="btn btnReplay " href="#" role="button" onClick="window.location.reload()">Rejouer</a>
+          </div>
+          <div class="cross">
+            <i class="far fa-times-circle " onclick="closePanel()"></i>
+          </div>
+        </div>
+        
+      </div>
+    </div>
     <section id="gameZone" class="container d-flex justify-content-center">
       <div class="row " id="divRow">
         
