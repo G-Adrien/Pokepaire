@@ -102,6 +102,10 @@ h1{
   background-color: #385ca9;
   border-radius: 0;
 }
+.jumbotron a{
+  background-color: #ca1212;
+  color: white;
+}
 
 .divCard{
   border: 0.6rem solid #ffcc00;
