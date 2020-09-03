@@ -96,7 +96,16 @@ textarea {
 h1{
   font-family: "Pokemon Solid";
   color: #ffcc00;
-  /* font-size: 2em !important; */
+}
+#pokeballImg{
+height: 90px;
+
+}
+#pokeballImg img{
+  height: 100%;
+  }
+#titleAndImage{
+  justify-content: space-between;
 }
 
 .lead{
@@ -125,7 +134,7 @@ h1{
 }
 
 .divCard{
-  border: 0.6rem solid #ffcc00;
+  border: 0.6rem solid #192653;
   border-radius: 15px;
   padding: 0;
   margin: .5em;
@@ -140,7 +149,7 @@ h1{
 
 #gameZone img{
   width: 100%;
-  border-radius: 30px;
+  border-radius: 5px;
   
 }
 
@@ -189,6 +198,14 @@ body{
 .cross:hover{
   color: rgb(165, 165, 165);
   cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  #titleAndImage{
+    justify-content: start;
+  }
+  #pokeballImg{
+    margin-left: 150px;
+  }
 }
 /* ==========================================================================
    Helper classes

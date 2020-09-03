@@ -1,6 +1,6 @@
 let cardBase = ["img/pairePokemon/1.png", "img/pairePokemon/2.png", "img/pairePokemon/3.png", "img/pairePokemon/4.png", "img/pairePokemon/5.png", "img/pairePokemon/6.png"];
 let allCards = cardBase.concat(cardBase);   // On copie le tableau pour avoir les images en double
-let backCard = "img/pairePokemon/hidden.png";     // On définie l'image de dos
+let backCard = "img/pairePokemon/hidden.jpg";     // On définie l'image de dos
 let click = 0;  // Nombre de cliques
 let pair = 0;   // Nombre de paires
 let tryUser = 0;
@@ -19,7 +19,7 @@ function generateCard(){
         html += `
         <div class="divCol col-4 col-md-3 col-lg-3 col-lg-3">
             <div class="divCard">
-                <img src="img/pairePokemon/hidden.png" onclick="chooseCard(${i})" draggable="false">
+                <img src="img/pairePokemon/hidden.jpg" onclick="chooseCard(${i})" draggable="false">
             </div>
         </div> 
         `;
@@ -41,6 +41,7 @@ function chooseCard(card){
     }
     if(click === 0){
         choiceOne = card;
+        document.getElementsByClassName("divCard")[choiceOne].style.border = '0.6rem solid #ffcb05';
         document.images[card].src = allCards[card];
         document.images[choiceOne].style.pointerEvents = 'none';
         click = 1;
@@ -48,6 +49,7 @@ function chooseCard(card){
     else{
         click = 2
         choiceTwo = card; 
+        document.getElementsByClassName("divCard")[choiceTwo].style.border = '0.6rem solid #ffcb05';
         document.images[card].src = allCards[card];
         timer = setTimeout('checkCard()', 1000);
     }
@@ -64,9 +66,14 @@ function checkCard(){
         document.images[choiceOne].style.opacity = '0.3';
         document.images[choiceTwo].style.pointerEvents = 'none';
         document.images[choiceTwo].style.opacity = '0.3';
+        document.getElementsByClassName("divCard")[choiceOne].style.border = '0.6rem solid #ffcb05';
+        document.getElementsByClassName("divCard")[choiceTwo].style.border = '0.6rem solid #ffcb05';
+        
         pair++;
     }
     else{
+        document.getElementsByClassName("divCard")[choiceOne].style.border = '0.6rem solid #192653';
+        document.getElementsByClassName("divCard")[choiceTwo].style.border = '0.6rem solid #192653';
         document.images[choiceOne].src = backCard;
         document.images[choiceOne].style.pointerEvents = 'auto';
         document.images[choiceTwo].src = backCard;
