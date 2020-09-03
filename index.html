@@ -28,14 +28,9 @@
   <!-- Add your site or application content here -->
 <!-- ########### Header ###########-->
   <header class="jumbotron">
-    <div class="d-flex" id="titleAndImage">
-      <div>
+    <div id="titleAndImage">
         <h1 class="display-5">Poképaire</h1>
         <p class="lead">Jeux des paires Pokémon.</p>
-      </div>
-      <div id="pokeballImg">
-        <img src="img/pairePokemon/Pokeball.PNG" alt="logo de pokéball">
-      </div>
     </div>
     <hr>
     <p>Essayez de faire trouver les paires le plus rapidement possible.</p>
@@ -47,8 +42,9 @@
       <a class="btn btn-lg btnReplay" href="#" role="button" onClick="window.location.reload()">Rejouer</a>
     </div>
   </header>
-  <!-- ########### Game ###########-->
   <main>
+        <!-- ########### Panel Victory in display:none ###########-->
+
     <div id="closePanel">
       <div id="backgroundPanel" class="d-flex justify-content-center">
         <div id="winPanel">
@@ -64,6 +60,7 @@
         </div>
       </div>
     </div>
+    <!-- ########### Game ###########-->
     <section id="gameZone" class="container d-flex justify-content-center">
       <div class="row " id="divRow">
         <!-- 

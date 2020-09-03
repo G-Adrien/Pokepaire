@@ -87,25 +87,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   @font-face {
-    font-family: "Pokemon Solid";
-    src: url("../font/Pokemon_Solid.ttf");
-           
+/*  ########## Police ##########  */
 
+@font-face {
+font-family: "Pokemon Solid";
+src: url("../font/Pokemon_Solid.ttf");
 }
+
+/*  ########## Jumbotron ##########  */
+
 h1{
   font-family: "Pokemon Solid";
   color: #ffcc00;
-}
-#pokeballImg{
-height: 90px;
-
-}
-#pokeballImg img{
-  height: 100%;
-  }
-#titleAndImage{
-  justify-content: space-between;
 }
 
 .lead{
@@ -121,8 +114,6 @@ height: 90px;
 .btnReplay{
   background-color: #ca1212;
   color: white;
- 
-  
 }
 .btnReplay:hover{
   background-color: #8d1111;
@@ -138,7 +129,11 @@ height: 90px;
   border-radius: 15px;
   padding: 0;
   margin: .5em;
+  transition-duration: 500ms;
 }
+
+/*  ########## Game ##########  */
+
 #gameZone{
   padding-bottom: 10%;
 }
@@ -150,7 +145,6 @@ height: 90px;
 #gameZone img{
   width: 100%;
   border-radius: 5px;
-  
 }
 
 .divCol{
@@ -163,9 +157,13 @@ height: 90px;
 body{
   position: relative;
 }
+
+
+/*  ########## Panel Victory ##########  */
 #closePanel{
   display: none;
 }
+
 #backgroundPanel{
   display: none;
   position: fixed;
@@ -179,13 +177,13 @@ body{
 
 #winPanel{
   position: fixed;
- 
   z-index: 201;
   background-color: white;
   border-radius: 4px;
   padding: 3em 6em;
   margin: 8%;
 }
+
 .cross{
   color: rgb(255, 255, 255);
   position: absolute;
@@ -195,18 +193,12 @@ body{
   right: -37px;
   height: auto;
 }
+
 .cross:hover{
   color: rgb(165, 165, 165);
   cursor: pointer;
 }
-@media screen and (min-width: 576px) {
-  #titleAndImage{
-    justify-content: start;
-  }
-  #pokeballImg{
-    margin-left: 150px;
-  }
-}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
