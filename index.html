@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-
+  
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -28,16 +28,21 @@
   <!-- Add your site or application content here -->
 
   <header class="jumbotron">
-    <h1 class="display-4">Poképaire</h1>
+    <h1 class="display-5">Poképaire</h1>
     <p class="lead">Jeux des paires Pokémon.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p>Time : <span id="chrono">0:00</span></p>
-    <p>Nombre de coup : <span id="trySpan"></span> </p>
+    <hr>
+    <p>Essayez de faire trouver les paires le plus rapidement possible.</p>
+    <div class="d-flex ">
+      <div class="d-flex mr-5" id="chronoTry">
+        <p class=" mr-5">Temps : <span id="chrono">0:00</span></p>
+        <p class="">Nombre de coup : <span id="trySpan">0</span></p>
+      </div>
+      <a class="btn btn-lg" href="#" role="button" onClick="window.location.reload()">Rejouer</a>
+    </div>
   </header>
   <main>
-    <section id="gameZone" class="container">
-      <div class="row" id="divRow">
+    <section id="gameZone" class="container d-flex justify-content-center">
+      <div class="row " id="divRow">
         
         
         

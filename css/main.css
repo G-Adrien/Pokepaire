@@ -96,15 +96,32 @@ textarea {
 h1{
   font-family: "Pokemon Solid";
   color: #ffcc00;
-  
+  /* font-size: 2em !important; */
+}
+
+.lead{
+  margin: 0.3em;
 }
 .jumbotron{
   background-color: #385ca9;
   border-radius: 0;
+  padding: 1em;
+  color: white;
 }
+
 .jumbotron a{
   background-color: #ca1212;
   color: white;
+  padding: 0px 0px;
+  height: 2em;
+}
+.jumbotron a:hover{
+  background-color: #8d1111;
+  color: rgb(179, 179, 179);
+}
+
+#chronoTry p{
+  margin: auto;
 }
 
 .divCard{
@@ -112,7 +129,6 @@ h1{
   border-radius: 15px;
   padding: 0;
   margin: .5em;
-
 }
 #gameZone{
   padding-bottom: 10%;
@@ -124,12 +140,17 @@ h1{
 
 #gameZone img{
   width: 100%;
+  border-radius: 30px;
+  
 }
 
 .divCol{
   padding: 0;
 }
 
+#divRow{
+  max-width: 720px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
