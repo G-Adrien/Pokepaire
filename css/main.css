@@ -161,7 +161,8 @@ body{
 
 /*  ########## Panel Victory ##########  */
 #closePanel{
-  display: none;
+  display: block;   
+   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! a modifer */
 }
 
 #backgroundPanel{
@@ -180,23 +181,36 @@ body{
   z-index: 201;
   background-color: white;
   border-radius: 4px;
-  padding: 3em 6em;
-  margin: 8%;
+  padding: 1em 1em;
+  margin: 8em 1em ;
+}
+#winPanel h2{
+ font-size: 30px;
+ margin-top: 1em;
 }
 
+
 .cross{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: absolute;
   font-size: 2em;
   z-index: 202;
-  top: -45px;
-  right: -37px;
+  top: 0px;
+  right: 6px;
   height: auto;
 }
 
 .cross:hover{
   color: rgb(165, 165, 165);
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 576px) {
+  
+  #winPanel{
+    padding: 1em 3em;
+  }
 }
 
 /* ==========================================================================
