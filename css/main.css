@@ -87,16 +87,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   @font-face {
-    font-family: "Pokemon Solid";
-    src: url("../font/Pokemon_Solid.ttf");
-           
+/*  ########## Police ##########  */
 
+@font-face {
+font-family: "Pokemon Solid";
+src: url("../font/Pokemon_Solid.ttf");
 }
+
+/*  ########## Jumbotron ##########  */
+
 h1{
   font-family: "Pokemon Solid";
   color: #ffcc00;
-  /* font-size: 2em !important; */
 }
 
 .lead{
@@ -109,13 +111,11 @@ h1{
   color: white;
 }
 
-.jumbotron a{
+.btnReplay{
   background-color: #ca1212;
   color: white;
-  padding: 0px 0px;
-  height: 2em;
 }
-.jumbotron a:hover{
+.btnReplay:hover{
   background-color: #8d1111;
   color: rgb(179, 179, 179);
 }
@@ -125,11 +125,15 @@ h1{
 }
 
 .divCard{
-  border: 0.6rem solid #ffcc00;
+  border: 0.6rem solid #192653;
   border-radius: 15px;
   padding: 0;
   margin: .5em;
+  transition-duration: 500ms;
 }
+
+/*  ########## Game ##########  */
+
 #gameZone{
   padding-bottom: 10%;
 }
@@ -140,8 +144,7 @@ h1{
 
 #gameZone img{
   width: 100%;
-  border-radius: 30px;
-  
+  border-radius: 5px;
 }
 
 .divCol{
@@ -151,6 +154,51 @@ h1{
 #divRow{
   max-width: 720px;
 }
+body{
+  position: relative;
+}
+
+
+/*  ########## Panel Victory ##########  */
+#closePanel{
+  display: none;
+}
+
+#backgroundPanel{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.735);
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+}
+
+#winPanel{
+  position: fixed;
+  z-index: 201;
+  background-color: white;
+  border-radius: 4px;
+  padding: 3em 6em;
+  margin: 8%;
+}
+
+.cross{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-size: 2em;
+  z-index: 202;
+  top: -45px;
+  right: -37px;
+  height: auto;
+}
+
+.cross:hover{
+  color: rgb(165, 165, 165);
+  cursor: pointer;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
