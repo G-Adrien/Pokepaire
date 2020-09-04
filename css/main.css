@@ -161,8 +161,7 @@ body{
 
 /*  ########## Panel Victory ##########  */
 #closePanel{
-  display: block;   
-   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! a modifer */
+  display: none;
 }
 
 #backgroundPanel{
