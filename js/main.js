@@ -118,4 +118,3 @@ function chrono() {
 function closePanel(){ // fonction pour caché le panneau de victoire.
     document.getElementById("closePanel").style.display = "none";
 }
-
