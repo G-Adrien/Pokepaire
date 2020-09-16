@@ -1,7 +1,4 @@
-
-# Projet fil Rouge (Banque)
-
-### Projet de semaine n°9 et 2 éme évaluation AFPA Développeur Web (2020)
+## Projet de semaine n°9 et 2 éme évaluation AFPA Développeur Web (2020)
 
 
 Objectif: Création d'un jeu des paires en **HTML, CSS et JavaScript normes ES6**.
